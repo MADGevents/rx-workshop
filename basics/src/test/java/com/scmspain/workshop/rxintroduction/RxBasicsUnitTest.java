@@ -48,17 +48,7 @@ public class RxBasicsUnitTest {
 
     Observable<Integer> observable = integerObservableObservable.map(RxBasics.multiplyByTen());
 
-    observable.subscribe(new Action1<Integer>() {
-      @Override
-      public void call(Integer integer) {
-        System.out.println(integer);
-      }
-    }/*, new Action1<Throwable>() {
-      @Override
-      public void call(Throwable throwable) {
-        throwable.printStackTrace();
-      }
-    }*/);
+    observable.subscribe(System.out::println, Throwable::printStackTrace);
   }
 
   @Test

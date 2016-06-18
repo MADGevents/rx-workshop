@@ -12,7 +12,6 @@ public class RxBasics {
   }
 
   public static Func1<Integer, Integer> multiplyByTen() {
-    return null;
-    //TODO: Return a Func1 to map x -> x * 10
+    return integer -> integer * 10;
   }
 }
